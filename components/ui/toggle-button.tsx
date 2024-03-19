@@ -5,7 +5,6 @@ import { use, useEffect, useState } from "react";
 
 const defaultTheme = () => {
   if( typeof window !== "undefined"){
-
     const userPreference = window &&
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
