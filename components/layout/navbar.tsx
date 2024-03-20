@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import Container from "../ui/container";
 import ModeToggle from "../ui/toggle-button";
+import OnlyClient from "../ui/only-client";
 
 type PathType = "internal" | "external";
 
@@ -73,7 +74,9 @@ const Navbar: React.FunctionComponent = () => {
             }
           })}
         </ul>
+        <OnlyClient>
         <ModeToggle/>
+        </OnlyClient>
       </nav>
     </Container>
   );

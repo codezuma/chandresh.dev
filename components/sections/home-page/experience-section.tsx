@@ -23,7 +23,7 @@ const ExperienceSection: React.FunctionComponent = () => {
   return (
     <Container
       className="experience-section grid grid-cols-1 mt-16 justify-start gap-4">
-      <h2 className="about-heading leading-snug font-medium text-base ">
+      <h2 className="about-heading  leading-snug font-semibold text-base ">
         {'Worked as.'}
       </h2>
       <main className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8">

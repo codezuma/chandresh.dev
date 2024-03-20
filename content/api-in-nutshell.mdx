@@ -1,0 +1,56 @@
+---
+title: "What is API in nutshell?"
+publishedAt: "2023-03-20"
+summary: "We will Learn About API, it’s types and architectural styles."
+---
+
+### What is API?
+
+API stands for application programming interface, If you watched multiple tutorials and read blogs but still not clear what an API is?. Most of the tutorials give example of restaurants and waiter, expect you to understand it. There is nothing wrong in that example but it can clearly be misunderstood. Many programmer thinks API is by which you request something and get the response, which is true partially but API is more than that.
+
+An API is a connection between two computer programs, which can be written in same or different language and can be present on same or different computer. So in nutshell an API works as a bridge which connects two different applications.
+
+Now let’s understand why it is called API with the help of example — 
+Your instagram post button let us you upload photos on instagram servers with one click.
+
+1\. Application — here instagram application on your phone interacts with another application on instagram servers.
+
+2\. Programming — How they connect to each other is programmetically
+
+3\. Interface — When you see interface always always think about abstraction here when the button is clicked the a request is send to instagram servers with your photo. your phones app does not known how the server is working it just sends the data and waits for response.
+
+### Advantages
+
+**Communication** — APIs lets one product communicate through different products and services. This helps in dividing sytem into small components which communicate through APIs, which can simplify app development as each team or person can be assigned to specific component.for example a web app can divided into two components frontend and backend, now each part is assigned to certain teams. The frontend team doesn’t care what backend team does and vice-versa, they can communicate with the help of APIs.
+
+**Abstraction** — APIs help make system, So one code does not have to worry about how the other code works. for example you are using google maps API you don’t care what algorithm they are using which database they are using,you just have to request them and they will send you result. tommarow if they change their code you don’t have to worry about that because of oth the programs are independent. This layer of abstraction helps in scaling system.
+
+**Platform Agnostic** — It means that APIs lets you connect code from one language to another. We all know that all languages have their advantages for example your iphone can run swift but it can’t run NodeJS. So you can create an API from which you can send request from swift but calculations will be done on linux server which can run NodeJS.
+
+### Types of APIs
+
+1\. Private APIs — This APIs can only be accessed within a particular app. Example — Banking Apps.
+
+2\. Partner APIs — This APIs work as services, companies provide their service or data to partner for money. Example — sms service, \[stripe payment gateway.\](https://stripe.com/docs/api)
+
+3\. Public APIs — This APIs are available for everyone, which lets third party developer use it to create something. Example \[Facebook developer API\](https://developers.facebook.com/).
+
+### APIs protocol and architectures
+
+APIs are mainly used for exchange of data and services. This requires some rules and constraints and architecture patterns. Today , three API architecture are commonly used REST,SOAP and RPC. Each one has their own rules, constraints and purposes, let’s understand each in more details.
+
+#### REST
+
+REST stands for representational state transfer, it was introduced by \[Roy Fielding\](https://en.wikipedia.org/wiki/Roy\_Fielding) . RESTAPIs are mostly used because they are light weight , highly scalable and maintable .The REST architecture style consist of six constraints, when a system follows all this constraints It is called a RESTful API.
+
+Six constraints are *\*\****\*\*Client–server architecture , Statelessness, Cachebility, Layered System, Uniform interface and code on demand(optional).\*\***\*\*
+
+#### SOAP
+
+SOAP stands for Simple Object Access Protocol. While RestAPI require HTTP protocol SOAP services are independent of transfer protocol but unlike REST, SOAP only allows XML objects to be passed as data. which makes it less efficient. While it is transfer protocol independent thanks to internet everything almost everything works HTTP, so it’s not a big advantage for SOAP.
+
+#### RPC JSON/RPC XML
+
+RPC is remote procedural call used to execute code from client to server. It is one of the oldest procedure it uses json as data format. It is not much used nowdays, similarly rpc-xml uses xml as data encoding.
+
+Hope you understood what an api is ?How does it work in. In next tutorial we will learn about REST it’s constraints in details.

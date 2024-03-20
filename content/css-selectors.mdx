@@ -1,0 +1,300 @@
+---
+title: "You Don’t Know CSS Yet: Selectors and Pseudo Classes"
+publishedAt: "2023-03-20"
+summary: "Everthing you will ever need learn about CSS Selectors"
+---
+
+CSS Selectors is one of the first things we learn in CSS, We know how to use them but are you using them properly? Do you know everything about it ? What are the best Practices ? Here you will learn how to write scalable maintainable and DRY code.
+
+## What are Selectors?
+
+In Order to apply styles to a HTML element, we need to select the element in stylesheet. CSS provides us number of methods to select these elements and these methods are called selectors.
+
+This is gonna be a really long article so bear with me.
+
+### Here are the group of selectors we will learn about -
+
+- Simple Selectors
+- Grouping Selectors
+- Combinators
+- Pseudo Elements and Classes
+
+## Simple Selectors
+
+As name suggest these are most simple and straightforward group, they target element directly based on classes, IDs and Attributes.
+
+### Universal Selector ( \* )
+
+Styles applied in this selector is applied to all elements present in the page, it starts with a Asterisk (\*) Symbol.
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  //properties here
+}
+```
+
+### Class Selector ( . )
+
+Starts with a dot (.) followed by the class name and that is the class selector. There is one great thing about classes, an element can have as many classes as god wants there is no limit this helps
+
+in keeping code DRY (if you don’t know what DRY is then click here).
+
+Here is a quick example
+
+You want to make three button primary secondary and tertiary, all three will have same dimensions but different color. So instead of giving height and width three times we can write a class “button” which can be extended by all the elements.
+
+```html
+<button class="button primary-button">Primary button</button>
+<button class="button secondary-button">Secondarybutton</button>
+<button class="button tertiary-button">Tertiary button</button>
+```
+
+```css
+.button {
+  height: 50px;
+  width: 200px;
+}
+.primary-button {
+  background-color: #565656;
+}
+.secondary-button {
+  background-color: #f4f4f4f;
+}
+.tertiary-button {
+  background-color: transparent;
+}
+```
+
+### Element Selector
+
+Directly targets the elements of the DOM with the respective tag name.
+
+```html
+<h1>This is Heading 1</h1>
+```
+
+this selector is used when there is no need to create extra class suppose you want to overwrite h1
+
+tag styles then you can simply use tag selector like this.
+
+```html
+h1 font-size:2rem; }
+```
+
+This makes our code more clean and scalable so instead of putting class every time we can just use element selector to style all the tags. You should use this selector for overall styling rather then custom styles.
+
+### ID Selector
+
+ID selector starts with hash “#” followed by ID of element. It is the most misunderstood selector of all time, people say it is used to select unique element but they are wrong. That is how ID works in Javascript, but for CSS its a bit different
+
+- While Every Element can have only one ID , two elements can have same id and if we use id selector it would be applied to both.
+- That’s not the case with Javascript here every element will have unique ID and every ID will have only one element.
+- Second problem with ID selector is that It can create **[Specificity Wars](https://stuffandnonsense.co.uk/archives/css_specificity_wars.html) . Hierarchy of the selectors goes by ID>Attribute>Class>Tag>Universal>Predefined . So once you style a element with ID it is hard to overwrite that So use it at your own risk.**
+
+```html
+<button id="submit-button">Submit -></button>
+```
+
+```css
+#submit-button {
+  // styles here
+}
+```
+
+### Attribute
+
+CSS selector that matches the attribute and its value it is used like this “[Attribute=’value’]”.
+
+```css
+/* <a> elements with a title attribute */
+a[title] {
+  color: purple;
+}
+
+/* <a> elements with an href matching "https://example.org" */
+a[href="https://example.org"]
+{
+  color: green;
+}
+
+/* <a> elements with an href containing "example" */
+a[href*="example"] {
+  font-size: 2em;
+}
+
+/* <a> elements with an href ending ".org" */
+a[href$=".org"] {
+  font-style: italic;
+}
+
+/* <a> elements whose class attribute contains the word "logo" */
+a[class~="logo"] {
+  padding: 2px;
+}
+```
+
+Attribute selectors are generally chained with any other simple selectors and rarely used alone.
+
+next we will learn about Chaining selectors.
+
+## Grouping and Chaining selectors
+
+### Grouping selectors
+
+The comma “,” is used to group different selectors together and provide same style we can use this to make code DRY and maintainable there would be be many times when you would have many similar properties for many selectors in that using group selectors would be great .
+
+For Example
+
+```css
+<button class="primary-button">Primary button</button>
+<button class="secondary-button">Secondarybutton</button>
+<button class="tertiary-button">Tertiary button</button>
+```
+
+Previously we had added button class to each button element separately to provide common styling alternatively we can use grouping also for same thing and can avoid using “button” class in html.
+
+```css
+.primary-button,
+.secondary-button,
+.tertiary-button {
+  height: 50px;
+  width: 200px;
+}
+.primary-button {
+  background-color: #565656;
+}
+.secondary-button {
+  background-color: #f4f4f4f;
+}
+.tertiary-button {
+  background-color: transparent;
+}
+```
+
+> Group Selector works same as Logical operator “OR”. In this example it says select primary
+
+### Chaining selectors
+
+It is used to select a niche element by applying multiple selectors at a same [time.](http://time.It) It will select the the element which has has all selectors present.
+
+Here is an example ➖
+
+You want to select a anchor tag which has '”link” class and “disabled” as attribute then
+
+```html
+<a href="#" class="link disabled>Click Here</a>
+```
+
+then selector for this would be
+
+```html
+a.link[disabled]{ color:grey; }
+```
+
+<aside>
+💡 Remember there is no space between selectors if we put space it is considered as descendant selector which we will study later.
+
+</aside>
+
+> This works same as AND logical operator.
+
+## Descendant selector
+
+This selector is used to select descendants of a selector represented by symbol “ “,That means anything which is children of this element can be selected by this method.
+
+Now What are descendants ?
+
+```html
+// this element will be refered as container
+<div class="container">
+  <ul>
+    <li>one</li>
+    <li>two</li>
+  </ul>
+  <span></span>
+</div>
+```
+
+
+So we can select this elements using descendent selector.
+
+```html
+// for li tag this selctors tells that select a li tag which is presnt in ul
+which is present in element with .container class. .container ul li{
+list-style:none; } // for span .container span{ margin:50px; }
+```
+
+There are different type of descendant selectors.
+
+| Selector         | Symbol | Syntax          | Explanation                                           |
+| ---------------- | ------ | --------------- | ----------------------------------------------------- |
+| Child Selector   | >      | .container > ul | selects only direct children of element not sub child |
+| Adjacent sibling | +      | ul + span       | select adjacent element of element .                  |
+| general sibling  | ~      | ul ~ span       | select all sibling based on condition                 |
+
+<aside>
+💡 general sibling selector only works for sibling after the element there no way to select element before it .
+
+</aside>
+
+For more information [click here](https://drafts.csswg.org/selectors/#descendant-combinators)
+
+## Pseudo classes and Elements
+
+### Pseudo classes
+
+pseudo classes are simple selector that gets activated when certain condition or state of element matches in the elements. pseudo classes can be selected by “ : “ symbol.
+
+Certain condition for pseudo classes can be
+
+**:first-child -**
+
+Select every first child present in HTML DOM.
+
+Example p:first-child will every first child of p tag
+
+```html
+<div class="Parent">
+  <p>first child of parent</p>
+  //selected
+  <p>second child of parent</p>
+  <span>
+    <p>first child of span</p>
+    //selected
+  </span>
+</div>
+```
+
+This are also used for state of element like :disabled, a:visited and a:link for anchor tag
+
+list of all pseudo selectors present in CSS. [Click here](https://www.w3schools.com/css/css_pseudo_classes.asp)
+
+### Pseudo Elements (::)
+
+Unlike how pseudo classes used for state, This selectors work on specific parts of elements like placeholder first-letter , first-line or scrollbar and it’s parts.
+
+Commonly used Pseudo Elements are
+
+- **::selection :- It is used to style the element when we select it ( the blue background is default state).**
+- ::before and ::after :- adds an element to respective element selected with content mentioned in css property content.
+
+```html
+.container::after{ //create a new element after .container element and puts
+content as heelo world content:'heelo world'; }
+```
+
+<aside>
+💡 This is generally used in animation to make code clean in html file
+
+</aside>
+
+links to check for all selectors
+
+- [https://web.dev/learn/css/pseudo-elements/](https://web.dev/learn/css/pseudo-elements/)
+- [https://www.w3schools.com/css/css_pseudo_elements.asp](https://www.w3schools.com/css/css_pseudo_elements.asp)
+
+Thank you for reading till the end. If you feel like there is anything missing feel free to comment
+
+would love the feedback.

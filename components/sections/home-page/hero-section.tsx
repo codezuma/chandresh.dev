@@ -3,7 +3,7 @@ import Container from "../../ui/container";
 const HeroSection: React.FunctionComponent = () => {
   return (
     <Container>
-      <h2 className="about-heading leading-snug mt-6 font-medium text-base ">
+      <h2 className="about-heading leading-snug mt-6 font-semibold text-base ">
         {"About me."}
       </h2>
       <div className="about-content-wrapper leading-6  font-normal text-secondary-foreground mt-4">

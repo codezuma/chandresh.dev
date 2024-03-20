@@ -1,0 +1,80 @@
+---
+title: "How to give meaningful names in code?"
+publishedAt: "2023-03-20"
+summary: "Choose clear, concise names that reflect the purpose and functionality of your code elements for better understanding and maintainability."
+---
+
+#### Tips to write a perfect variable name.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1664864149033/c0wCMaJkB.png)
+
+image from Clean code by robert martin (uncle bob)
+
+We as a programmers spend out most time choosing a name for variable. Naming is everywhere in software developement , we name variables and functions, we name classes their properties and methods too. We name, name and name.
+
+So ,if we have so much to name, we should better do it well. Here are some tips that tells us how to give better names.
+
+### Use Intent revealing name
+
+It is easy to say that name should be intent revealing but it’s not easy to find. It may take some time but that time is always worth it, a good name will take less time to understand the code and it would benefit in long run . A variable should always say it’s meaning, if you write a comment to indicate what a variable contains then you should probably think of another name. you should change the name of variable if you find a more suitable name , it’s helps you and your teammates. Modern IDE’s make it very easy to change names.
+
+#### Let’s see an example
+
+Here it’s better to use “presentStudentToday” instead of “students” and writing comment, makes more sense.
+
+### Make Meaningful Distinctions
+
+As a developer it is your job to write names not only for the sake of compiler but for understanding of fellow developers also. There have been many times when you have added a number or capitalized first letter just because the original name was used, like using “invoice1” because “invoice” is already used. If another person reads your code he/she won’t understand what does “invoice1” means and how it’s different from “invoice”. This is not limited to adding numbers in names , each name should be specific and unique.
+
+Let us say you are building a pokemon game and in that you have a “pokemon” class it contains two properties pokemon.data and [pokemon.info](http://pokemon.info). Now you may have named them different but do they mean different no they do not, names should be distints.
+
+### Name should say it’s type
+
+You should name a variable in such a way that it indicates the datatype, name should never be confusing like weather it’s a boolean or string. Here are tips that I follow while writing code.
+
+BOOLEAN : use “is” or “has” as prefix for boolean. “pokemon.paralysed()” or “pokemon.isParalysed() ”what do you think which name makes “isParalysed ” right. because with pokemon.paralysed you cannot say weather it paralyses the pokemon or checking but pokemon.isParalysed() justifies that it’s checking wheather pokemon is paralysed or not and it returns a boolean.
+
+ARRAY : Use plural words for arrays like “pokemons” instead of “pokemon” as it clearly says that there are more than one pokemon in that variable, that means it is an array.
+
+FUNCTIONS: while naming functions there is only one rule always be very specific , each name should be distinct with a approach that it won’t cause problem in future. Imagine you have a function to get Invoice data from database you name it “getInvoice()” but later as your application grows , now you use more than one services to get data then what would you name it.you should change it to “getInvoiceFromAPI()”.So it is clear reader from where you are getting the data.
+
+METHODS : For methods remember to add a verb in name like getData , postPicture ,save and delete, a little verb is enough to make it understandable.
+
+CLASS: Names should be simple and straight forward as we use it all the times in the code, class name should have noun and verbs like “Customer”,”employee”,”teacher”.class like presentStudent is not good for records instead use “Student.isPresent()” to check wheather it is present or not instead of creating a whole class.
+
+### Don’t be cute
+
+Your funny names or geeky reference might be cool to people who share same humor as yours. Naming methods like kill() or hulkSmash() is fine until a guy who reads it is a DC fan, naming it simple like delete or remove is would be more precise. “Choose clarity over entertainment” Remember you are a programmer and not entertainer, people have other sources for entertainment they don’t need funny names.
+
+### Use the right length
+
+Naming with right is often hard, there are many times when you have named something very long like “daysElaspedSinceBlahBlahBlah ”and many times you would just name it “a”,”object”. Now tell me how can someone understand what does that “object” contain by looking at it. If you are using it as a temporary object name it “temporaryObject” or even “tmp” would be better than “object”.
+
+I have seen many people writing code like this
+
+can you understand this code in a glace no but if you read it carefully it is just algorithm for binary search, Now there are two mistakes in this code over commenting and unknown names let us refactor the code
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1664864151423/BjaqCISJM.png)
+
+Now what about this we can clearly see what code does, it tells a story and all variables are characters. To make sure you use the right size follow this rule “length of name should be directly proportional to it’s scope” . bigger the scope more precise you need to be.
+
+### Be Consistent
+
+Generally when we are working on big project consistency is a major factor. you should be consistent in whatever you are doing using naming convections, naming methods .
+
+I personally prefer this naming convections
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1664864153598/N5JAGHz-a.png)
+
+for more details about naming convections visit [https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) .
+
+you should also be consistent in naming methods. Imagine you have two classes teacher and student both have methods to get there information, then name of those methods should also be same like “student.info” you should not name one “info” and another one “data” as it creates confusion.
+
+### Final words
+
+In the end I would say there are two you should always follow.
+
+1.  Pack information in your name so reader can extract from it to understand .
+2.  If you find better name for something never fear to change it as it will only things easy in future.
+
+#### If you have any comments and tips please let me know and Thank you for reading this I hope naming variable would be easy for you in future.

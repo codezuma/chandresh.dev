@@ -15,13 +15,6 @@ export const contactItems = [
     },
   },
   {
-    title: "LinkedIn",
-    link: {
-      display: "linkedin.com/in/chandreshpatidar",
-      url: "https://linkedin.com/in/chandreshpatidar",
-    },
-  },
-  {
     title: "Instagram",
     link: {
       display: "@chandreshpatidar_",

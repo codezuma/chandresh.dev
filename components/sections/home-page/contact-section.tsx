@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import Container from "@/components/ui/container";
 import { contactItems } from "@/lib/contact";
-import Link from "next/link";
 import LinkText from "@/components/ui/link";
 
 interface ContactItemProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -17,7 +16,7 @@ const ContactSection: React.FunctionComponent = () => {
   return (
     <Container>
       <header>
-        <h2 className="contact-heading  mt-12 leading-snug font-medium text-base ">
+        <h2 className="contact-heading  mt-12 leading-snug font-semibold text-base ">
           {"Contact."}
         </h2>
         <div className="about-content-wrapper leading-6  font-normal text-secondary-foreground mt-4 mb-8">

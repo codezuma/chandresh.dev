@@ -8,6 +8,12 @@ type Metadata = {
   image?: string;
 };
 
+export type Blog = {
+  metadata: Metadata;
+  slug: string;
+  content: string;
+};
+
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
   let match = frontmatterRegex.exec(fileContent);

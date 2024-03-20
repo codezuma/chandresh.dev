@@ -12,7 +12,6 @@ const defaultTheme = () => {
     : "light";
     
     const userSaved = window && localStorage.getItem("theme");
-    console.log("userPreference",userPreference,userSaved);
    
     return userSaved || userPreference;
   }
@@ -34,7 +33,6 @@ const ModeToggle = () => {
   let [theme, setTheme] = useState(defaultTheme());
   useEffect(() => {
     if (typeof window !== "undefined") {
-      console.log("refreshing theme",defaultTheme());
       refreshTheme();
     }
   }, [theme]);

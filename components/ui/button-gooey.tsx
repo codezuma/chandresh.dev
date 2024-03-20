@@ -5,16 +5,16 @@ export const ButtonGooey = ({ children }: PropsWithChildren) => {
   return (
     <>
       <div className="wrapper">
-        <button className="button">
+        <button className="button bg-secondary">
           {children}
           <div className="bubble">
-            <ArrowRightIcon className="h-6 w-6" />
+            <ArrowRightIcon className="h-6 w-6 text-secondary-foreground" />
           </div>
         </button>
       </div>
 
       <svg
-        className="absolute hidden"
+        className="absolute bg-secondary hidden"
         width="0"
         height="0"
         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export const ButtonGooey = ({ children }: PropsWithChildren) => {
 
         .button {
           background: hsl(var(--secondary));
-          color: #eee;
+          color: hsv(var(--secondary-foreground));
           display: inline-flex;
           font-weight: bold;
           padding: 0 24px 0 24px;
