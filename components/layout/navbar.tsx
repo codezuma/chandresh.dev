@@ -20,12 +20,7 @@ const navlinks = [
     link: "/",
     isAvailable: true,
   },
-  {
-    pathType: "internal",
-    title: "About",
-    link: "/about",
-    isAvailable: true,
-  },
+
   {
     pathType: "internal",
     title: "Blog",
@@ -34,10 +29,11 @@ const navlinks = [
   },
   {
     pathType: "internal",
-    title: "Contact",
-    link: "/contact",
+    title: "Work",
+    link: "/work",
     isAvailable: true,
   },
+
 ];
 
 const Navbar: React.FunctionComponent = () => {
@@ -75,7 +71,7 @@ const Navbar: React.FunctionComponent = () => {
           })}
         </ul>
         <OnlyClient>
-        <ModeToggle/>
+          <ModeToggle />
         </OnlyClient>
       </nav>
     </Container>

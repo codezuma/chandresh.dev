@@ -48,7 +48,7 @@ const ExperienceItem: React.FunctionComponent<ExperienceItemProps> = ({
   return (
     <div
       className={cn(
-        'experience-item border-l-2 pl-4 hover:border-teal-700 dark:hover:border-teal-300  cursor-default transition-all',
+        'experience-item border-l-2 pl-4 hover:border-teal-700  dark:hover:border-teal-300  cursor-default transition-all',
         className,
       )}
       {...attr}>

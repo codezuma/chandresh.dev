@@ -49,7 +49,7 @@ const ModeToggle = () => {
     }
   };
   return (
-    <Button onClick={handleChange} variant={"ghost"} size={"icon"}>
+    <Button onClick={handleChange} aria-label="Theme Toggle Button" variant={"ghost"} size={"icon"}>
       {theme === "light" ? (
         <Sun className="w-5 h-5 group-hover:-rotate-45 transition-all  rotate-3" />
       ) : (
