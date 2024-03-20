@@ -24,7 +24,7 @@ const ExperienceSection: React.FunctionComponent = () => {
     <Container
       className="experience-section grid grid-cols-1 mt-16 justify-start gap-4">
       <h2 className="about-heading leading-snug font-medium text-base ">
-        {'worked as.'}
+        {'Worked as.'}
       </h2>
       <main className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8">
         {experiences.map(
@@ -48,7 +48,7 @@ const ExperienceItem: React.FunctionComponent<ExperienceItemProps> = ({
   return (
     <div
       className={cn(
-        'experience-item border-l-2 pl-4 hover:border-orange-300 cursor-default transition-all',
+        'experience-item border-l-2 pl-4 hover:border-teal-700 dark:hover:border-teal-300  cursor-default transition-all',
         className,
       )}
       {...attr}>

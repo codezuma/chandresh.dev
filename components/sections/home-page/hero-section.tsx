@@ -4,12 +4,12 @@ const HeroSection: React.FunctionComponent = () => {
   return (
     <Container>
       <h2 className="about-heading leading-snug mt-6 font-medium text-base ">
-        {"about me."}
+        {"About me."}
       </h2>
       <div className="about-content-wrapper leading-6  font-normal text-secondary-foreground mt-4">
         <p>
           {
-            "Hey! I am an engineer (designer, sometimes), learning how to build and design scalable websites and applications. My focus is to build with better user experience, design aesthetic, good developer experience and meaningful impact."
+            "Crafting UIs with React since 2020. learning how to build and design scalable websites and applications, striving to create great experiences."
           }
         </p>
       </div>

@@ -22,7 +22,7 @@ const LinkText: React.FunctionComponent<LinkTextProps> = ({
       target={target}
     >
       <span className="link-text-content-wrapper">{attr?.children}</span>
-      <ArrowUpRight className="w-4 mt-0.5 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
+      <ArrowUpRight className="w-4 mt-[1px] group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
     </Link>
   );
 };

@@ -22,7 +22,7 @@ const links = [
 
 export const Footer = () => {
   return (
-    <Container className="mt-12 pb-36 text-base">
+    <Container className="mt-12 pb-8 text-base">
       <p className="mt-8">
         Built with{" "}
         {links.map((link, index) => (

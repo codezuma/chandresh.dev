@@ -43,7 +43,7 @@ const Navbar: React.FunctionComponent = () => {
   return (
     <Container>
       <nav className="navbar mt-12 flex justify-between">
-        <ul className="navbar-options-list flex flex-row items-center justify-start -ml-4 gap-2">
+        <ul className="navbar-options-list flex flex-row items-center justify-start -ml-[9px] gap-2">
           {navlinks.map((pathMapItem, pathMapIndex: number) => {
             if (pathMapItem?.isAvailable) {
               return (
