@@ -1,5 +1,21 @@
 export const experiences = [
   {
+    experienceTitle: "Software Engineer",
+    experienceDescription: [
+      "Built a Invoice platform integrated Government E-Invoice API.",
+      "Used Typescript , React, NextJS, TailwindCSS for building frontend and UI.",
+    ],
+    experienceOrg: {
+      name: "Ritzyware",
+      link: "https://ritzyware.com/",
+      websiteDisplayName: "ritzyware.com",
+    },
+    experienceStatus: {
+      startAt: "Apr, 2024",
+      endAt: "Present",
+    },
+  },
+  {
     experienceTitle: "Software Engineering Intern",
     experienceDescription: [
       "Built a CRM platform that worked with WhatsApp Business API.",

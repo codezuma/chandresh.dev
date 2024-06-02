@@ -9,7 +9,7 @@ const HeroSection: React.FunctionComponent = () => {
       <div className="about-content-wrapper leading-6  font-normal text-secondary-foreground mt-4">
         <p>
           {
-            "Crafting UIs with React since 2020. learning how to build and design scalable websites and applications, striving to create great experiences."
+            "👷‍♂️ Crafting UIs with React since 2021, 📚 learning how to build and design scalable websites and applications, 🌟 striving to create great experiences, 🔭 tinkering with Flutter and Python."
           }
         </p>
       </div>

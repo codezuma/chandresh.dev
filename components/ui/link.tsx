@@ -8,15 +8,14 @@ interface LinkTextProps extends LinkProps {
   target?: "_blank" | "_parent" | "_self" | "_top";
 }
 
-export const AnimatedArrow = ({ className }: PropsWithClassName) => {
-  return <div className={cn("relative ml-1 mt-[.3rem] h-5 w-5 overflow-hidden", className)}>
-    <div className="absolute transition-all duration-200 group-hover:-translate-y-[14px] group-hover:translate-x-3">
-      <ArrowUpRight className="h-4 w-4 text-secondary-foreground" />
-      <ArrowUpRight className="h-4 w-4 -translate-x-3 text-secondary-foreground" />
+  export const AnimatedArrow = ({ className }: PropsWithClassName) => {
+    return <div className={cn("relative ml-1 mt-[.3rem] h-5 w-5 overflow-hidden text-secondary-foreground", className)}>
+      <div className="absolute transition-all duration-200 group-hover:-translate-y-[14px] group-hover:translate-x-3">
+        <ArrowUpRight className="h-4 w-4 " />
+        <ArrowUpRight className="h-4 w-4 -translate-x-3 " />
+      </div>
     </div>
-  </div>
-
-};
+  };
 const LinkText: React.FunctionComponent<LinkTextProps> = ({
   className,
   target,

@@ -55,7 +55,7 @@ const BlogPostPreview = ({ post }: { post: Blog }) => {
   const formattedDate = formatDate(post.metadata.publishedAt);
 
   return (
-    <article className="border p-4 group relative rounded-lg bg-zinc-200/50 dark:bg-zinc-800 transition-all hover:-translate-y-1 flex gap-2 border-gray-300 dark:border-gray-700">
+    <article className="border p-4 group relative rounded-lg bg-zinc-200/50 dark:bg-zinc-800 transition-all hover:shadow flex gap-2 border-gray-300 dark:border-gray-700">
       <header className="flex gap-2 flex-col ">
         <h2 className="text-[17px] font-semibold text-primary">{post.metadata.title}</h2>
         <p className="text-[15px]  text-secondary-foreground ">{post.metadata.summary}</p>

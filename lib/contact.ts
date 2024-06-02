@@ -28,11 +28,11 @@ export const contactItems = [
       url: "https://chandresh.dev",
     },
   },
-  {
+/*   {
     title: "Resume",
     link: {
       display: "chandresh.dev/resume",
-      url: "/resume",
+      url: "https://chandresh.dev/resume",
     },
-  },
+  }, */
 ];
