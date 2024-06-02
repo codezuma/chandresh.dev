@@ -27,6 +27,12 @@ const navlinks = [
     link: "/blog",
     isAvailable: true,
   },
+  /* {
+    pathType: "internal",
+    title: "Lab",
+    link: "/lab",
+    isAvailable: true,
+  }, */
   {
     pathType: "internal",
     title: "Work",
@@ -51,7 +57,7 @@ const Navbar: React.FunctionComponent = () => {
                   <Link href={pathMapItem?.link}>
                     <Button
                       variant={"link"}
-                      className="after:w-full  relative after:absolute after:h-[1px] px-[1px] mx-2  after:bg-zinc-800 after:bottom-2 after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-out  hover:after:origin-bottom-left after:origin-bottom-right"
+                      className="after:w-full  relative after:absolute after:h-[1px] px-[1px] mx-2 dark:after:bg-zinc-300 after:bg-zinc-800 after:bottom-2 after:rounded after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-out  hover:after:origin-bottom-left after:origin-bottom-right"
                     >
                       {pathMapItem?.title}
                     </Button>

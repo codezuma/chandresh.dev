@@ -12,11 +12,11 @@ interface ExperienceItemProps extends React.HTMLAttributes<HTMLDivElement> {
     websiteDisplayName?: React.ReactNode | string;
   };
   experienceStatus?:
-    | 'current'
-    | {
-        startAt?: React.ReactNode | string;
-        endAt?: React.ReactNode | string;
-      };
+  | 'current'
+  | {
+    startAt?: React.ReactNode | string;
+    endAt?: React.ReactNode | string;
+  };
 }
 
 const ExperienceSection: React.FunctionComponent = () => {
@@ -92,7 +92,7 @@ const ExperienceItem: React.FunctionComponent<ExperienceItemProps> = ({
             {descriptionItem}
           </li>
         ))}
-      
+
       </ul>
     </div>
   );
