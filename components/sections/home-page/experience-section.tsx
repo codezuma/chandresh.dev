@@ -52,9 +52,9 @@ const ExperienceItem: React.FunctionComponent<ExperienceItemProps> = ({
         className,
       )}
       {...attr}>
-      <div className="flex flex-row items-start justify-between max-md:flex-col max-md:justify-start max-md:gap-2 max-sm:w-[320px]">
+      <div className="flex flex-row items-start justify-between max-md:flex-col max-md:justify-start max-md:gap-2">
         <span>
-          <h3 className="experience-title font-normal  capitalize w-[46ch] max-md:w-[30ch]">
+          <h3 className="experience-title font-normal capitalize ">
             {experienceTitle + ', ' + experienceOrg?.name}
           </h3>
           <p className="experience-org-details-wrapper text-sm flex flex-row items-center justify-start gap-1.5">

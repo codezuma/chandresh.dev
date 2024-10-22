@@ -43,7 +43,7 @@ const ContactItem: React.FunctionComponent<ContactItemProps> = ({
   return (
     <div
       className={cn(
-        "contact-item grid sm:grid-cols-3 grid-cols-2 items-center justify-start gap-4",
+        "contact-item grid sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 items-center justify-start gap-4",
         className
       )}
       {...attr}
