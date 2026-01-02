@@ -27,16 +27,10 @@ const navlinks = [
     link: "/blog",
     isAvailable: true,
   },
-  /* {
-    pathType: "internal",
-    title: "Lab",
-    link: "/lab",
-    isAvailable: true,
-  }, */
   {
     pathType: "internal",
-    title: "Work",
-    link: "/work",
+    title: "Resume",
+    link: "/resume",
     isAvailable: true,
   },
 

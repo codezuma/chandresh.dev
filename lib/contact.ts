@@ -18,7 +18,7 @@ export const contactItems = [
     title: "Instagram",
     link: {
       display: "@chandreshpatidar_",
-      url: "https://instagram.com/chandreshpatidar_",
+      url: "https://instagram.com/chandresh__patidar",
     },
   },
   {
