@@ -1,8 +1,9 @@
 import { ImageResponse } from 'next/og';
+import { NextRequest } from 'next/server';
 
 export const runtime = 'edge';
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const title = searchParams.get('title') || 'Chandresh Patidar';
@@ -77,8 +78,9 @@ export async function GET(request: Request) {
         height: 630,
       }
     );
-  } catch (e: any) {
-    console.log(`${e.message}`);
+  } catch (e: unknown) {
+    const error = e instanceof Error ? e.message : 'Unknown error';
+    console.log(error);
     return new Response(`Failed to generate the image`, {
       status: 500,
     });
