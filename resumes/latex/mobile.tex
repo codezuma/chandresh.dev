@@ -1,0 +1,149 @@
+%-------------------------------------------------------------------------------
+% Chandresh Patidar - Resume
+% Generated from resumes/template.tex + resumes/resumes.json by
+% scripts/build-resumes.mjs (or the Resume dashboard pane). Edit those, not
+% the files in resumes/latex/.
+% Single column, standard fonts, real text so ATS can parse it. pdfLaTeX on Overleaf.
+%-------------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\titleformat{\section}{\vspace{-6pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+\newcommand{\resumeRole}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small\textbf{#2} \\
+    \small{#3} & \small{#4} \\
+  \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeProduct}[2]{
+  \item[]\vspace{-2pt}\small{\textbf{#1} \textit{-- #2}}\vspace{-4pt}
+}
+\newcommand{\resumeProject}[2]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \small#2 \\
+  \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeListEnd}{\end{itemize}}
+\newcommand{\resumeItemsStart}{\begin{itemize}[leftmargin=0.2in, itemsep=0pt, label=\textbullet]}
+\newcommand{\resumeItemsEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+\begin{center}
+  {\Huge \scshape Chandresh Patidar} \\ \vspace{2pt}
+  \small Mobile Engineer, React Native \\ \vspace{2pt}
+  \small +91 9784205657 $|$
+  \href{mailto:patidarchandresh21@gmail.com}{patidarchandresh21@gmail.com} $|$
+  \href{https://github.com/codezuma}{github.com/codezuma} $|$
+  \href{https://linkedin.com/in/chandresh-22/}{linkedin.com/in/chandresh-22}
+\end{center}
+
+\section{Summary}
+\small{Mobile engineer with 3+ years shipping React Native (Expo) and Flutter apps to iOS and Android, including custom Swift/Kotlin native modules, offline playback, live video and full RTL localization, backed by the TypeScript APIs I build.}
+
+\section{Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+  \small{\item{
+    \textbf{Mobile \& Web:} React Native (Expo, EAS), Next.js, React, Flutter, Tailwind, TanStack Query/Table, Reanimated \\
+    \textbf{Languages:} TypeScript, JavaScript, SQL, Dart, Swift/Kotlin (Expo native modules) \\
+    \textbf{Backend \& Data:} Node.js, Bun, Hono, Express, Prisma, PostgreSQL + pgvector, Redis, RabbitMQ, BullMQ, Supabase \\
+    \textbf{AI \& Infra:} Claude API (Vision, tool use), OpenAI (tool calling, embeddings, Whisper), RAG, AWS (S3, MediaConvert, CloudFront, SQS), Docker, GitHub Actions, Sentry, PostHog, Playwright
+  }}
+\end{itemize}
+\vspace{-14pt}
+
+\section{Experience}
+\resumeListStart
+
+  \resumeRole{Software Engineer}{Sept 2024 -- Present}{Kraftbase}{Remote}
+  \resumeListStart
+    \resumeProduct{Wrinsy}{laundry pickup \& delivery for apartment communities (React Native, Next.js, Express, PostgreSQL)}
+    \resumeItemsStart
+      \resumeItem{Shipped \textbf{2 React Native apps} (residents; drivers \& staff) and a \textbf{Next.js ops console} from one pnpm monorepo with shared UI, API and type packages; releases versioned with Changesets, built on EAS in GitHub Actions.}
+      \resumeItem{Wrote a custom \textbf{Expo native module in Swift + Kotlin} over a vendor \textbf{Bluetooth} SDK so residents unlock smart lockers from their phone; locker secrets encrypted at rest with \textbf{AES-256-GCM}.}
+      \resumeItem{Designed a 4-stage \textbf{AI care-tag scanner}: \textbf{Claude Vision} extracts label facts via forced-JSON tool use, a deterministic rules engine decides, and a confidence gate fails safe before residents see a verdict.}
+      \resumeItem{Cut up to \textbf{60\,s of queueing delay} from every \textbf{Salesforce Agentforce} chat reply by replacing cron dispatch with synchronous, per-session serialized calls; also integrated Salesforce CRM, e-paper labels and OSRM routing.}
+    \resumeItemsEnd
+
+    \resumeProduct{Odem}{wellness app for meditation, breathwork \& yoga (React Native, Bun, Hono, Prisma, AWS)}
+    \resumeItemsStart
+      \resumeItem{Built the \textbf{Expo} app end to end: personalized onboarding, programs, \textbf{offline downloads}, \textbf{Agora} live classes, \textbf{7 languages with full RTL} (Arabic) and PostHog product analytics.}
+      \resumeItem{Built \textbf{encrypted HLS} delivery (S3 $\rightarrow$ MediaConvert $\rightarrow$ CloudFront signed URLs), with \textbf{Redis} playback grants that keep progress heartbeats off the database.}
+      \resumeItem{Built an \textbf{AI wellness coach} on \textbf{GPT-4o-mini}: a regex intent router picks the tool strategy, then up to 3 rounds of \textbf{function calling} across 5 catalog tools stream to the app over \textbf{SSE}, with Whisper voice input and a prompt-injection guard.}
+      \resumeItem{Built \textbf{RAG} on \textbf{pgvector} (text-embedding-3-small, HNSW cosine index) with a plain-query fallback when embeddings are missing; every suggested ID is re-verified in the database, so invented or unpublished content never reaches users.}
+      \resumeItem{Added \textbf{long-term memory}: stated preferences and dislikes become durable exclusions, chats past 10 messages are summarized, and onboarding, mood and streak personalize replies; graded by 28 mocked tests plus live OpenAI scorecards.}
+    \resumeItemsEnd
+  \resumeListEnd
+
+  \resumeRole{Software Engineer}{Apr 2024 -- Aug 2024}{Ritzyware}{Remote}
+  \resumeItemsStart
+    \resumeItem{Cut load times by \textbf{40\%} on client \textbf{React/Next.js} apps by reworking how their pages render in TypeScript.}
+    \resumeItem{Built an \textbf{e-invoicing} module on government compliance APIs that validates every invoice before it is filed,
+      and shipped a \textbf{Flutter} app with \textbf{Firebase Cloud Messaging} push.}
+  \resumeItemsEnd
+
+  \resumeRole{Frontend Engineer}{Oct 2023 -- Jan 2024}{CrunchyMedia}{Remote}
+  \resumeItemsStart
+    \resumeItem{Built the CRM for \textbf{Chati}, CrunchyMedia's \textbf{WhatsApp Business API} platform for Indian businesses, with
+      \textbf{WebSocket} delivery so two-way chats stay live across many concurrent conversations.}
+    \resumeItem{Built a front-end engine that lets businesses design and manage their own \textbf{WhatsApp Flows}
+      (interactive forms inside the chat).}
+  \resumeItemsEnd
+
+  \resumeRole{Software Engineer Intern}{Jul 2023 -- Sept 2023}{Kraftbase}{Remote}
+  \resumeItemsStart
+    \resumeItem{Built map-based property search with location filters for a hospitality platform on \textbf{Supabase}, using
+      \textbf{Postgres functions} and \textbf{row-level security} policies, plus API caching to cut repeat server load.}
+  \resumeItemsEnd
+
+\resumeListEnd
+
+\section{Open Source \& Projects}
+\resumeListStart
+  \resumeProject{\textbf{Open source contributions} $|$ \emph{React, TypeScript}}{2023}
+  \resumeItemsStart
+    \resumeItem{\href{https://github.com/slashbase/slashbaseide/pull/122}{\textbf{Slashbase}} (1.3k\,$\star$ database IDE): added
+      table refresh to the data view. \href{https://github.com/Ryczko/FormsLab/pull/145}{\textbf{FormsLab}} (546\,$\star$ form
+      builder): added a global progress bar. Both PRs merged.}
+  \resumeItemsEnd
+
+  \resumeProject{\textbf{RSVP, TeamShiksha} $|$ \emph{Figma, React, design system}}{2024}
+  \resumeItemsStart
+    \resumeItem{Designed the UI in Figma and built the matching frontend design system for event-management software.}
+  \resumeItemsEnd
+\resumeListEnd
+
+\section{Education}
+\resumeListStart
+  \resumeRole{GGTU}{2020 -- 2024}{Bachelor of Science (Mathematics)}{}
+\resumeListEnd
+
+\end{document}

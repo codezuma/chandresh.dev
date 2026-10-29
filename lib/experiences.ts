@@ -2,9 +2,10 @@ export const experiences = [
   {
     experienceTitle: "Software Engineer",
     experienceDescription: [
-      "Architected a real-time stock trading game utilizing Binance WebSocket API with custom order matching algorithms, enabling efficient trade execution and real-time updates.",
-      "Engineered a scalable notification engine using BullMQ and Redis to handle trade alerts while maintaining system performance, ensuring instant and reliable user updates.",
-      "Developed a Design System using Tailwind and Radix UI to maintain consistency.",
+      "Wrinsy (laundry pickup & delivery for apartment communities): shipped 2 React Native apps and a Next.js ops console from one monorepo, a Swift + Kotlin Expo module that unlocks smart lockers over Bluetooth, and a Claude Vision care-tag scanner with a rules engine and confidence gate.",
+      "Wrinsy: cut up to 60 s of queueing delay from every Salesforce Agentforce chat reply by replacing cron dispatch with synchronous, per-session serialized calls.",
+      "Odem (wellness app): built the Expo app end to end, with offline downloads, Agora live classes and 7 languages including right-to-left Arabic.",
+      "Odem: built an AI wellness coach on GPT-4o-mini with function calling, RAG on pgvector, long-term memory and SSE streaming, and encrypted HLS video delivery on AWS.",
     ],
     experienceOrg: {
       name: "Kraftbase",
@@ -19,9 +20,9 @@ export const experiences = [
   {
     experienceTitle: "Software Engineer",
     experienceDescription: [
-      "Engineered a Flutter-based mobile application with Firebase Cloud Messaging integration for real-time push notifications.",
-      "Designed an e-Invoice system that interacts with government APIs for compliance and automated validation checks, improving the efficiency and accuracy of invoices.",
-      "Spearheaded development of performant web applications using TypeScript, React, and Next.js with optimized rendering techniques, leading to a 40% improvement in load times.",
+      "Cut load times by 40% on client React/Next.js apps by reworking how their pages render.",
+      "Built an e-invoicing module on government compliance APIs that validates every invoice before it is filed.",
+      "Shipped a Flutter app with Firebase Cloud Messaging push notifications.",
     ],
     experienceOrg: {
       name: "Ritzyware",
@@ -36,9 +37,8 @@ export const experiences = [
   {
     experienceTitle: "Frontend Engineer",
     experienceDescription: [
-      "Built a CRM platform integrated with WhatsApp Business API.",
-      "Developed a front-end engine to build custom WhatsApp Flows, enabling businesses to create and manage interactive messaging workflows.",
-      "Implemented WebSocket connections for reduced message delivery latency while supporting concurrent connections, improving user experience and system efficiency.",
+      "Built the CRM for Chati, CrunchyMedia's WhatsApp Business API platform, with WebSocket delivery so two-way chats stay live across many concurrent conversations.",
+      "Built a front-end engine that lets businesses design and manage their own WhatsApp Flows (interactive forms inside the chat).",
     ],
     experienceOrg: {
       name: "CrunchyMedia",
@@ -53,9 +53,8 @@ export const experiences = [
   {
     experienceTitle: "Software Engineer Intern",
     experienceDescription: [
-      "Built a Hospitality Service Platform with interactive map functionalities for property locations, enhancing user experience and location-based filtering.",
-      "Leveraged Supabase with PostgreSQL functions and row-level security (RLS) for enterprise-grade data protection, ensuring compliance with industry standards.",
-      "Implemented API caching strategies to reduce server load and improve data retrieval speed.",
+      "Built map-based property search with location filters for a hospitality platform on Supabase, using Postgres functions and row-level security policies.",
+      "Added API caching to cut repeat server load.",
     ],
     experienceOrg: {
       name: "Kraftbase",
