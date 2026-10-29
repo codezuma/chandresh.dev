@@ -1,0 +1,144 @@
+{
+  "bullets": [
+    {
+      "id": "wApps",
+      "section": "wrinsy",
+      "tex": "Shipped \\textbf{2 React Native apps} (residents; drivers \\& staff) and a \\textbf{Next.js ops console} from one pnpm monorepo with shared UI, API and type packages; releases versioned with Changesets, built on EAS in GitHub Actions."
+    },
+    {
+      "id": "wLocker",
+      "section": "wrinsy",
+      "tex": "Wrote a custom \\textbf{Expo native module in Swift + Kotlin} over a vendor \\textbf{Bluetooth} SDK so residents unlock smart lockers from their phone; locker secrets encrypted at rest with \\textbf{AES-256-GCM}."
+    },
+    {
+      "id": "wCareTag",
+      "section": "wrinsy",
+      "tex": "Designed a 4-stage \\textbf{AI care-tag scanner}: \\textbf{Claude Vision} extracts label facts via forced-JSON tool use, a deterministic rules engine decides, and a confidence gate fails safe before residents see a verdict."
+    },
+    {
+      "id": "wAgent",
+      "section": "wrinsy",
+      "tex": "Cut up to \\textbf{60\\,s of queueing delay} from every \\textbf{Salesforce Agentforce} chat reply by replacing cron dispatch with synchronous, per-session serialized calls; also integrated Salesforce CRM, e-paper labels and OSRM routing."
+    },
+    {
+      "id": "oApp",
+      "section": "odem",
+      "tex": "Built the \\textbf{Expo} app end to end: personalized onboarding, programs, \\textbf{offline downloads}, \\textbf{Agora} live classes, \\textbf{7 languages with full RTL} (Arabic) and PostHog product analytics."
+    },
+    {
+      "id": "oCoach",
+      "section": "odem",
+      "tex": "Built an \\textbf{AI wellness coach} on \\textbf{GPT-4o-mini}: a regex intent router picks the tool strategy, then up to 3 rounds of \\textbf{function calling} across 5 catalog tools stream to the app over \\textbf{SSE}, with Whisper voice input and a prompt-injection guard."
+    },
+    {
+      "id": "oRag",
+      "section": "odem",
+      "tex": "Built \\textbf{RAG} on \\textbf{pgvector} (text-embedding-3-small, HNSW cosine index) with a plain-query fallback when embeddings are missing; every suggested ID is re-verified in the database, so invented or unpublished content never reaches users."
+    },
+    {
+      "id": "oMemory",
+      "section": "odem",
+      "tex": "Added \\textbf{long-term memory}: stated preferences and dislikes become durable exclusions, chats past 10 messages are summarized, and onboarding, mood and streak personalize replies; graded by 28 mocked tests plus live OpenAI scorecards."
+    },
+    {
+      "id": "oVideo",
+      "section": "odem",
+      "tex": "Built \\textbf{encrypted HLS} delivery (S3 $\\rightarrow$ MediaConvert $\\rightarrow$ CloudFront signed URLs), with \\textbf{Redis} playback grants that keep progress heartbeats off the database."
+    }
+  ],
+  "skills": [
+    {
+      "id": "lang",
+      "tex": "\\textbf{Languages:} TypeScript, JavaScript, SQL, Dart, Swift/Kotlin (Expo native modules)"
+    },
+    {
+      "id": "mobile",
+      "tex": "\\textbf{Mobile \\& Web:} React Native (Expo, EAS), Next.js, React, Flutter, Tailwind, TanStack Query/Table, Reanimated"
+    },
+    {
+      "id": "backend",
+      "tex": "\\textbf{Backend \\& Data:} Node.js, Bun, Hono, Express, Prisma, PostgreSQL + pgvector, Redis, RabbitMQ, BullMQ, Supabase"
+    },
+    {
+      "id": "ai",
+      "tex": "\\textbf{AI \\& Infra:} Claude API (Vision, tool use), OpenAI (tool calling, embeddings, Whisper), RAG, AWS (S3, MediaConvert, CloudFront, SQS), Docker, GitHub Actions, Sentry, PostHog, Playwright"
+    }
+  ],
+  "versions": [
+    {
+      "id": "product",
+      "name": "Product",
+      "headline": "Product Engineer",
+      "summary": "Product engineer with 3+ years shipping mobile and web products end to end, from Figma and data model to App Store release. I own features across React Native, Next.js and TypeScript backends, including production AI built on Claude and OpenAI.",
+      "skills": [
+        "lang",
+        "mobile",
+        "backend",
+        "ai"
+      ],
+      "wrinsy": [
+        "wApps",
+        "wCareTag",
+        "wLocker",
+        "wAgent"
+      ],
+      "odem": [
+        "oApp",
+        "oCoach",
+        "oRag",
+        "oMemory",
+        "oVideo"
+      ]
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile",
+      "headline": "Mobile Engineer, React Native",
+      "summary": "Mobile engineer with 3+ years shipping React Native (Expo) and Flutter apps to iOS and Android, including custom Swift/Kotlin native modules, offline playback, live video and full RTL localization, backed by the TypeScript APIs I build.",
+      "skills": [
+        "mobile",
+        "lang",
+        "backend",
+        "ai"
+      ],
+      "wrinsy": [
+        "wApps",
+        "wLocker",
+        "wCareTag",
+        "wAgent"
+      ],
+      "odem": [
+        "oApp",
+        "oVideo",
+        "oCoach",
+        "oRag",
+        "oMemory"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "headline": "Full-Stack Engineer, AI Products",
+      "summary": "Full-stack engineer with 3+ years building AI product features in production: LLM agents with tool calling, RAG over pgvector, Claude Vision pipelines and streaming chat, shipped inside React Native and Next.js apps on TypeScript backends.",
+      "skills": [
+        "lang",
+        "backend",
+        "mobile",
+        "ai"
+      ],
+      "wrinsy": [
+        "wCareTag",
+        "wAgent",
+        "wApps",
+        "wLocker"
+      ],
+      "odem": [
+        "oCoach",
+        "oRag",
+        "oMemory",
+        "oVideo",
+        "oApp"
+      ]
+    }
+  ]
+}
